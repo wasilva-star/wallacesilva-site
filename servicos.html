@@ -1,0 +1,210 @@
+<!-- CRIE UM NOVO ARQUIVO: servicos.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ECALLAW | Serviços Realizados</title>
+
+<style>
+:root{
+--bg:#020617;
+--card:#0f172a;
+--accent:#22d3ee;
+--text:#e2e8f0;
+--muted:#94a3b8;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+background:var(--bg);
+color:var(--text);
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
+}
+
+h1{
+font-size:42px;
+margin-bottom:10px;
+}
+
+h2{
+font-size:26px;
+margin-bottom:25px;
+}
+
+p{
+color:var(--muted);
+line-height:1.6;
+}
+
+.topo{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:50px;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-box{
+width:48px;
+height:48px;
+background:var(--accent);
+color:#000;
+font-weight:800;
+border-radius:12px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+}
+
+.btn{
+padding:12px 18px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+transition:.2s;
+border:1px solid #1e293b;
+color:var(--text);
+}
+
+.btn:hover{
+transform:translateY(-2px);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.card{
+background:var(--card);
+padding:20px;
+border-radius:14px;
+box-shadow:0 0 0 1px rgba(255,255,255,.03);
+}
+
+.card img,
+.card video{
+width:100%;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+.card h3{
+color:var(--accent);
+margin-bottom:10px;
+}
+
+footer{
+margin-top:60px;
+text-align:center;
+color:#64748b;
+font-size:14px;
+}
+
+@media(max-width:700px){
+h1{
+font-size:32px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header class="topo">
+
+<div class="logo">
+<div class="logo-box">EW</div>
+<div>
+<div style="font-weight:800;font-size:20px;">ECALLAW</div>
+<div style="color:var(--muted);font-size:14px;">Assistência Técnica</div>
+</div>
+</div>
+
+<a href="index.html" class="btn">Voltar</a>
+
+</header>
+
+<section>
+<h1>Serviços Realizados</h1>
+<p>Confira alguns trabalhos executados em nossa assistência técnica.</p>
+
+<div class="grid">
+
+<div class="card">
+<img src="img/formatacao.jpg" alt="Formatação de notebook">
+<h3>Formatação Completa</h3>
+<p>Notebook otimizado com instalação limpa do Windows, drivers atualizados e programas essenciais.</p>
+</div>
+
+<div class="card">
+<img src="img/manutencao.jpg" alt="Limpeza interna PC">
+<h3>Limpeza Interna</h3>
+<p>Remoção de poeira, troca de pasta térmica e melhoria no resfriamento do equipamento.</p>
+</div>
+
+<div class="card">
+<img src="img/rede.jpg" alt="Upgrade SSD">
+<h3>Upgrade para SSD</h3>
+<p>Substituição de HD antigo por SSD para aumentar drasticamente a velocidade do sistema.</p>
+</div>
+
+<div class="card">
+<video controls>
+<source src="videos/videoplayback.mp4" type="video/mp4">
+Seu navegador não suporta vídeo.
+</video>
+<h3>Montagem de PC Gamer</h3>
+<p>Montagem completa de computador gamer com organização de cabos e testes finais.</p>
+</div>
+
+<div class="card">
+<video controls>
+<source src="videos/videoplayback2.mp4" type="video/mp4">
+Seu navegador não suporta vídeo.
+</video>
+<h3>Reparo em Notebook</h3>
+<p>Troca de tela quebrada e revisão geral no equipamento.</p>
+</div>
+
+<div class="card">
+<img src="img/rede2.jpg" alt="Configuração Wi-Fi">
+<h3>Configuração de Rede</h3>
+<p>Instalação de roteador, melhoria de sinal Wi-Fi e segurança da rede doméstica.</p>
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 ECALLAW Assistência Técnica
+</footer>
+
+</div>
+
+</body>
+</html>
