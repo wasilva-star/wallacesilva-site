@@ -88,10 +88,44 @@ p{color:var(--muted);line-height:1.6}
   50%{transform:scale(1.5);opacity:.6}
   100%{transform:scale(1);opacity:1}
 }
+
+/* MAGO */
+.mago-topo{
+position:absolute;
+top:10px;
+left:50%;
+transform:translateX(-50%);
+z-index:1;
+pointer-events:none;
+}
+
+.mago-topo img{
+width:48px;
+margin-top:8px;
+opacity:.95;
+animation:flutuar 3s ease-in-out infinite, brilho 2.5s ease-in-out infinite;
+}
+
+@keyframes flutuar{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-8px)}
+}
+
+@keyframes brilho{
+0%,100%{filter:drop-shadow(0 0 8px rgba(34,211,238,.5))}
+50%{filter:drop-shadow(0 0 18px rgba(34,211,238,1))}
+}
+
 </style>
 </head>
 
 <body>
+
+  <!-- MAGO -->
+<div class="mago-topo">
+<img src="img/atom.png" alt="Mago">
+</div>
+
 <div class="container">
 
 <section class="hero">
