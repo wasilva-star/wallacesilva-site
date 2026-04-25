@@ -6,85 +6,289 @@
 <title>ECALLAW | Assistência Técnica em Informática</title>
 
 <style>
-:root{--bg:#020617;--card:#0f172a;--accent:#22d3ee;--text:#e2e8f0;--muted:#94a3b8;}*{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(34,211,238,0.08), transparent 40%),
-    radial-gradient(circle at 80% 80%, rgba(34,211,238,0.05), transparent 40%),
-    linear-gradient(135deg, #4F4F4F 0%, #303131 100%);
-  color:var(--text);
+:root{
+--bg:#020617;
+--card:#0f172a;
+--accent:#22d3ee;
+--text:#e2e8f0;
+--muted:#94a3b8;
+--gold:#facc15;
 }
-.container{max-width:1100px;margin:auto;padding:60px 20px}
-h1{font-size:48px;margin-bottom:10px}
-h2{font-size:28px;margin-bottom:20px}
-p{color:var(--muted);line-height:1.6}
-.hero{display:flex;flex-direction:column;gap:20px;margin-bottom:80px}
-.hero strong{color:var(--accent)}
-.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:15px}
-.btn{padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:600;transition:.2s}
-.primary{background:var(--accent);color:#000}
-.secondary{border:1px solid #1e293b;color:var(--text)}
-.btn{
-  display:inline-block;
-  padding:14px 22px;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:700;
-  transition:all .3s ease;
-  box-shadow:0 6px 20px rgba(0,0,0,0.3);
-}
-.primary{
-  background:var(--accent);
-  color:#000;
-  box-shadow:0 8px 25px rgba(34,211,238,0.3);
-}
-.secondary{
-  border:1px solid rgba(255,255,255,0.1);
-  color:var(--text);
-}
-.btn:hover{
-  transform:translateY(-3px) scale(1.02);
-  box-shadow:0 12px 35px rgba(0,0,0,0.5);
-}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:80px}
-.card{background:var(--card);padding:25px;border-radius:12px}
-.card h3{margin-bottom:10px;color:var(--accent)}
-.projects{display:grid;gap:20px;margin-bottom:80px}
-.project{background:var(--card);padding:25px;border-radius:12px}
-.stack{display:flex;flex-wrap:wrap;gap:10px}
-.tag{padding:8px 12px;background:#020617;border:1px solid #1e293b;border-radius:20px;font-size:14px}
-.contact{text-align:center;margin-top:80px}
-footer{text-align:center;margin-top:40px;color:#64748b;font-size:14px}
-@media(max-width:800px){.grid{grid-template-columns:1fr}h1{font-size:36px}}
 
-/* === MAGO ROLANDO COM A PÁGINA === */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+background:
+radial-gradient(circle at 20% 20%, rgba(34,211,238,.08), transparent 40%),
+radial-gradient(circle at 80% 80%, rgba(34,211,238,.05), transparent 40%),
+linear-gradient(135deg,#4F4F4F 0%,#303131 100%);
+color:var(--text);
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
+}
+
+h1{
+font-size:48px;
+margin-bottom:10px;
+line-height:1.1;
+}
+
+h2{
+font-size:28px;
+margin-bottom:20px;
+}
+
+p{
+color:var(--muted);
+line-height:1.6;
+}
+
+.hero{
+display:flex;
+flex-direction:column;
+gap:20px;
+margin-bottom:80px;
+}
+
+.hero strong{
+color:var(--accent);
+}
+
+.cta{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:15px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 22px;
+border-radius:12px;
+text-decoration:none;
+font-weight:700;
+transition:all .3s ease;
+box-shadow:0 6px 20px rgba(0,0,0,.3);
+}
+
+.primary{
+background:var(--accent);
+color:#000;
+box-shadow:0 8px 25px rgba(34,211,238,.3);
+}
+
+.secondary{
+border:1px solid rgba(255,255,255,.1);
+color:var(--text);
+}
+
+.btn:hover{
+transform:translateY(-3px) scale(1.02);
+box-shadow:0 12px 35px rgba(0,0,0,.5);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+margin-bottom:80px;
+}
+
+.card{
+background:var(--card);
+padding:25px;
+border-radius:14px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+margin-bottom:10px;
+color:var(--accent);
+}
+
+.projects{
+display:grid;
+gap:20px;
+margin-bottom:80px;
+}
+
+.project{
+background:var(--card);
+padding:25px;
+border-radius:14px;
+transition:.3s;
+}
+
+.project:hover{
+transform:translateY(-5px);
+}
+
+.stack{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.tag{
+padding:8px 12px;
+background:#020617;
+border:1px solid #1e293b;
+border-radius:20px;
+font-size:14px;
+}
+
+.contact{
+text-align:center;
+margin-top:80px;
+}
+
+footer{
+text-align:center;
+margin-top:40px;
+color:#64748b;
+font-size:14px;
+padding-bottom:30px;
+}
+
+/* MAGO */
 .mago-topo{
-  position:absolute;
-  top:0;
-  left:50%;
-  transform:translateX(-50%);
-  z-index:1;
-  pointer-events:none;
+position:absolute;
+top:0;
+left:50%;
+transform:translateX(-50%);
+z-index:1;
+pointer-events:none;
 }
 
 .mago-topo img{
-  width:60px;
-  margin-top:8px;
-  opacity:0.95;
-  animation: flutuar 3s ease-in-out infinite, brilho 2.5s ease-in-out infinite;
+width:60px;
+margin-top:8px;
+opacity:.95;
+animation:flutuar 3s ease-in-out infinite, brilho 2.5s ease-in-out infinite;
 }
 
-/* levitação */
 @keyframes flutuar{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-8px)}
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-8px)}
 }
 
-/* brilho */
 @keyframes brilho{
-  0%,100%{filter: drop-shadow(0 0 8px rgba(34,211,238,.5))}
-  50%{filter: drop-shadow(0 0 18px rgba(34,211,238,1))}
+0%,100%{filter:drop-shadow(0 0 8px rgba(34,211,238,.5))}
+50%{filter:drop-shadow(0 0 18px rgba(34,211,238,1))}
+}
+
+/* DEPOIMENTOS */
+.reviews{
+margin-top:70px;
+padding:50px 20px;
+background:rgba(255,255,255,.03);
+border:1px solid rgba(255,255,255,.06);
+border-radius:18px;
+backdrop-filter:blur(10px);
+text-align:center;
+}
+
+.reviews h2{
+font-size:28px;
+margin-bottom:35px;
+}
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.review-card{
+background:rgba(15,23,42,.9);
+padding:25px;
+border-radius:16px;
+text-align:left;
+transition:.3s;
+}
+
+.review-card:hover{
+transform:translateY(-6px);
+}
+
+.stars{
+font-size:22px;
+color:var(--gold);
+margin-bottom:14px;
+letter-spacing:2px;
+}
+
+.review-card p{
+color:#cbd5e1;
+line-height:1.6;
+margin-bottom:18px;
+font-style:italic;
+}
+
+.review-card h4{
+color:var(--accent);
+margin-bottom:4px;
+font-size:17px;
+}
+
+.review-card span{
+font-size:13px;
+color:#94a3b8;
+}
+
+/* RESPONSIVO */
+@media(max-width:1000px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.review-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+h1{
+font-size:38px;
+}
+
+}
+
+@media(max-width:700px){
+
+.review-grid{
+grid-template-columns:1fr;
+}
+
+h1{
+font-size:32px;
+}
+
+.container{
+padding:40px 16px;
+}
+
+header{
+justify-content:center !important;
+text-align:center;
+}
+
+.cta{
+justify-content:center;
+}
+
 }
 </style>
 </head>
@@ -93,50 +297,102 @@ footer{text-align:center;margin-top:40px;color:#64748b;font-size:14px}
 
 <!-- MAGO -->
 <div class="mago-topo">
-  <img src="img/atom.png" alt="Mago">
+<img src="img/atom.png" alt="Mago">
 </div>
 
 <div class="container">
 
 <header style="display:flex;align-items:center;justify-content:space-between;margin-bottom:50px;gap:20px;flex-wrap:wrap;">
+
 <div style="display:flex;align-items:center;gap:12px;">
-<div style="width:48px;height:48px;border-radius:12px;background:var(--accent);color:#000;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:22px;">EW</div>
+
+<div style="width:48px;height:48px;border-radius:12px;background:var(--accent);color:#000;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:22px;">
+EW
+</div>
+
 <div>
-<div style="font-weight:800;font-size:20px; text-align: center;">ECALLAW</div>
+<div style="font-weight:800;font-size:20px;text-align:center;">ECALLAW</div>
 <div style="color:var(--muted);font-size:14px;">Assistência Técnica</div>
 </div>
+
 </div>
+
 <a class="btn secondary" href="atendimento.html">Atendimento</a>
+
 </header>
 
 <section class="hero">
+
 <h1>Seu computador com <strong>máxima performance</strong> novamente</h1>
-<p>Assistência técnica especializada em notebooks, PCs e redes. Atendimento rápido para residências, empresas e profissionais que não podem parar.</p>
+
+<p>
+Assistência técnica especializada em notebooks, PCs e redes.
+Atendimento rápido para residências, empresas e profissionais que não podem parar.
+</p>
 
 <div class="cta">
 <a class="btn primary" href="https://wa.me/5521969472761?text=Oi!%20vim%20pelo%20site.%20Quero%20solicitar%20um%20orçamento">Solicitar orçamento</a>
+
 <a class="btn secondary" href="servicos.html">Ver serviços para PC e notebook</a>
+
 <a class="btn secondary" href="celular.html">Ver Serviços para Celular</a>
 </div>
+
 </section>
 
 <section>
 <h2>Por que escolher a ECALLAW</h2>
+
 <div class="grid">
-<div class="card"><h3>Atendimento Rápido</h3><p>Diagnóstico ágil e solução eficiente para reduzir seu tempo parado.</p></div>
-<div class="card"><h3>Suporte Remoto</h3><p>Resolvemos diversos problemas sem precisar sair de casa.</p></div>
-<div class="card"><h3>Preço Justo</h3><p>Orçamento transparente e sem surpresas.</p></div>
+
+<div class="card">
+<h3>Atendimento Rápido</h3>
+<p>Diagnóstico ágil e solução eficiente para reduzir seu tempo parado.</p>
+</div>
+
+<div class="card">
+<h3>Suporte Remoto</h3>
+<p>Resolvemos diversos problemas sem precisar sair de casa.</p>
+</div>
+
+<div class="card">
+<h3>Preço Justo</h3>
+<p>Orçamento transparente e sem surpresas.</p>
+</div>
+
 </div>
 </section>
 
 <section id="servicos">
 <h2>Serviços para PCs e Notebooks</h2>
+
 <div class="projects">
-<div class="project"><h3>Formatação e Instalação</h3><p>Windows, drivers, programas essenciais e backup de arquivos.</p></div>
-<div class="project"><h3>Upgrade e Manutenção</h3><p>SSD, memória RAM, limpeza interna e otimização completa.</p></div>
-<div class="project"><h3>Remoção de Vírus</h3><p>Eliminação de malwares, lentidão e falhas de segurança.</p></div>
-<div class="project"><h3>Redes e Impressoras</h3><p>Configuração de Wi-Fi, roteadores e periféricos.</p></div>
-<div class="project"><h3>Suporte Empresarial</h3><p>Manutenção preventiva e suporte para equipes e escritórios.</p></div>
+
+<div class="project">
+<h3>Formatação e Instalação</h3>
+<p>Windows, drivers, programas essenciais e backup de arquivos.</p>
+</div>
+
+<div class="project">
+<h3>Upgrade e Manutenção</h3>
+<p>SSD, memória RAM, limpeza interna e otimização completa.</p>
+</div>
+
+<div class="project">
+<h3>Remoção de Vírus</h3>
+<p>Eliminação de malwares, lentidão e falhas de segurança.</p>
+</div>
+
+<div class="project">
+<h3>Redes e Impressoras</h3>
+<p>Configuração de Wi-Fi, roteadores e periféricos.</p>
+</div>
+
+<div class="project">
+<h3>Suporte Empresarial</h3>
+<p>Manutenção preventiva e suporte para equipes e escritórios.</p>
+</div>
+
 </div>
 </section>
 
@@ -144,30 +400,99 @@ footer{text-align:center;margin-top:40px;color:#64748b;font-size:14px}
 <h2>Serviços para Celular</h2>
 
 <div class="projects">
-<div class="project"><h3>Troca de Tela</h3><p>Substituição de telas quebradas ou com defeito.</p></div>
-<div class="project"><h3>Troca de Bateria</h3><p>Melhore a duração da carga do seu aparelho.</p></div>
-<div class="project"><h3>Conector de Carga</h3><p>Reparo em problemas de carregamento.</p></div>
-<div class="project"><h3>Desbloqueio e Software</h3><p>Atualizações, formatação e correções de sistema.</p></div>
+
+<div class="project">
+<h3>Troca de Tela</h3>
+<p>Substituição de telas quebradas ou com defeito.</p>
+</div>
+
+<div class="project">
+<h3>Troca de Bateria</h3>
+<p>Melhore a duração da carga do seu aparelho.</p>
+</div>
+
+<div class="project">
+<h3>Conector de Carga</h3>
+<p>Reparo em problemas de carregamento.</p>
+</div>
+
+<div class="project">
+<h3>Desbloqueio e Software</h3>
+<p>Atualizações, formatação e correções de sistema.</p>
+</div>
+
 </div>
 </section>
 
 <section>
 <h2>Tecnologias</h2>
+
 <div class="stack">
-<span class="tag">Windows</span><span class="tag">Linux</span><span class="tag">Office</span><span class="tag">Backup</span><span class="tag">Redes</span><span class="tag">SSD</span><span class="tag">Notebook</span><span class="tag">Desktop</span><span class="tag">Segurança</span>
+<span class="tag">Windows</span>
+<span class="tag">Linux</span>
+<span class="tag">Office</span>
+<span class="tag">Backup</span>
+<span class="tag">Redes</span>
+<span class="tag">SSD</span>
+<span class="tag">Notebook</span>
+<span class="tag">Desktop</span>
+<span class="tag">Segurança</span>
 </div>
 </section>
 
 <section class="contact">
 <h2>Precisa de ajuda agora?</h2>
+
 <p>Chame no WhatsApp e receba atendimento rápido.</p>
+
 <div class="cta" style="justify-content:center;">
 <a class="btn primary" href="https://wa.me/5521969472761?text=Oi!%20vim%20pelo%20site.">WhatsApp</a>
 <a class="btn secondary" href="mailto:contato@seudominio.com">Email</a>
 </div>
 </section>
 
-<footer>© 2026 ECALLAW Assistência Técnica</footer>
+<!-- DEPOIMENTOS -->
+<section class="reviews">
+
+<h2>O que nossos clientes dizem</h2>
+
+<div class="review-grid">
+
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>"Atendimento rápido e honesto. Meu notebook voltou zero."</p>
+<h4>Marcos Silva</h4>
+<span>Cliente Residencial</span>
+</div>
+
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>"Resolveram meu celular no mesmo dia. Excelente serviço."</p>
+<h4>Fernanda Costa</h4>
+<span>Assistência Celular</span>
+</div>
+
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>"Empresa séria, suporte técnico eficiente e preço justo."</p>
+<h4>Ricardo Alves</h4>
+<span>Cliente Empresarial</span>
+</div>
+
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>"Muito profissional. Recomendo para manutenção de PC."</p>
+<h4>Juliana Rocha</h4>
+<span>Cliente Particular</span>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 ECALLAW Assistência Técnica
+</footer>
 
 </div>
 </body>
