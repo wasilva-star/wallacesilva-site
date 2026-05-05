@@ -7,11 +7,12 @@
 
 <style>
 :root{
---bg:#020617;
---card:#0f172a;
---accent:#22d3ee;
---text:#e2e8f0;
---muted:#94a3b8;
+--bg:#f8fafc;
+--card:#ffffff;
+--accent:#0ea5e9;
+--text:#0f172a;
+--muted:#64748b;
+--border:#e5e7eb;
 }
 
 *{
@@ -21,12 +22,9 @@ box-sizing:border-box;
 }
 
 body{
-  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(34,211,238,0.08), transparent 40%),
-    radial-gradient(circle at 80% 80%, rgba(34,211,238,0.05), transparent 40%),
-    linear-gradient(135deg,#000000 0%,#1c15dd 100%);
-  color:var(--text);
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+background:var(--bg);
+color:var(--text);
 }
 
 .container{
@@ -36,7 +34,7 @@ padding:60px 20px;
 }
 
 h1{
-font-size:42px;
+font-size:38px;
 margin-bottom:10px;
 }
 
@@ -50,6 +48,7 @@ color:var(--muted);
 line-height:1.6;
 }
 
+/* TOPO */
 .topo{
 display:flex;
 justify-content:space-between;
@@ -57,6 +56,10 @@ align-items:center;
 margin-bottom:50px;
 flex-wrap:wrap;
 gap:15px;
+background:#fff;
+padding:18px 24px;
+border-radius:16px;
+border:1px solid var(--border);
 }
 
 .logo{
@@ -66,185 +69,86 @@ gap:12px;
 }
 
 .logo-box{
-width:48px;
-height:48px;
+width:45px;
+height:45px;
 background:var(--accent);
-color:#000;
+color:#fff;
 font-weight:800;
 border-radius:12px;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:22px;
+}
+
+/* BOTÕES */
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:12px 18px;
+border-radius:10px;
+text-decoration:none;
+font-weight:600;
+transition:.25s;
 }
 
 .btn{
-padding:12px 18px;
-border-radius:8px;
-text-decoration:none;
-font-weight:600;
-transition:.2s;
-border:1px solid #1e293b;
+background:#fff;
+border:1px solid var(--border);
 color:var(--text);
 }
 
 .btn:hover{
+background:#f1f5f9;
 transform:translateY(-2px);
 }
 
+/* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
 margin-top:30px;
 }
 
+/* CARDS */
 .card{
 background:var(--card);
 padding:20px;
-border-radius:14px;
-box-shadow:0 0 0 1px rgba(255,255,255,.03);
+border-radius:16px;
+border:1px solid var(--border);
+transition:.25s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
 .card img,
 .card video{
 width:100%;
-border-radius:10px;
+border-radius:12px;
 margin-bottom:15px;
 }
 
 .card h3{
-color:var(--accent);
+color:var(--text);
 margin-bottom:10px;
 }
 
+/* FOOTER */
 footer{
 margin-top:60px;
 text-align:center;
-color:#64748b;
+color:var(--muted);
 font-size:14px;
 }
 
+/* RESPONSIVO */
 @media(max-width:700px){
 h1{
-font-size:32px;
-}
-}
-
-/* ===== BOTÕES PREMIUM NEON 2026 ===== */
-
-.btn{
-position:relative;
-display:inline-block;
-padding:15px 24px;
-border-radius:14px;
-text-decoration:none;
-font-weight:800;
-letter-spacing:.3px;
-overflow:hidden;
-z-index:1;
-transition:all .35s ease;
-backdrop-filter:blur(8px);
-border:1px solid rgba(255,255,255,.08);
-box-shadow:
-0 0 8px rgba(34,211,238,.25),
-0 0 20px rgba(34,211,238,.12),
-inset 0 0 12px rgba(255,255,255,.03);
-}
-
-/* FUNDO ANIMADO */
-.btn::before{
-content:"";
-position:absolute;
-inset:0;
-background:linear-gradient(
-130deg,
-rgba(34,211,238,.15),
-rgba(59,130,246,.25),
-rgba(168,85,247,.18),
-rgba(34,211,238,.15)
-);
-background-size:300% 300%;
-animation:neonFlow 5s linear infinite;
-z-index:-2;
-}
-
-/* BRILHO DESLIZANDO */
-.btn::after{
-content:"";
-position:absolute;
-top:-50%;
-left:-120%;
-width:70%;
-height:220%;
-background:linear-gradient(
-90deg,
-transparent,
-rgba(255,255,255,.45),
-transparent
-);
-transform:rotate(18deg);
-animation:shine 3.2s linear infinite;
-z-index:-1;
-}
-
-/* BOTÃO PRINCIPAL */
-.primary{
-color:#000;
-background:rgba(34,211,238,.95);
-box-shadow:
-0 0 12px rgba(34,211,238,.7),
-0 0 28px rgba(34,211,238,.45),
-0 0 60px rgba(34,211,238,.25);
-}
-
-/* BOTÃO SECUNDÁRIO */
-.secondary{
-color:#fff;
-background:rgba(255,255,255,.03);
-}
-
-/* HOVER */
-.btn:hover{
-transform:translateY(-4px) scale(1.04);
-box-shadow:
-0 0 16px rgba(34,211,238,.9),
-0 0 40px rgba(34,211,238,.55),
-0 0 80px rgba(34,211,238,.28);
-}
-
-/* CLIQUE */
-.btn:active{
-transform:scale(.97);
-}
-
-/* PULSO CONTÍNUO */
-.primary{
-animation:pulseNeon 2s infinite;
-}
-
-/* ANIMAÇÕES */
-@keyframes neonFlow{
-0%{background-position:0% 50%;}
-100%{background-position:100% 50%;}
-}
-
-@keyframes shine{
-0%{left:-120%;}
-100%{left:160%;}
-}
-
-@keyframes pulseNeon{
-0%,100%{
-box-shadow:
-0 0 10px rgba(34,211,238,.55),
-0 0 25px rgba(34,211,238,.25);
-}
-50%{
-box-shadow:
-0 0 18px rgba(34,211,238,1),
-0 0 45px rgba(34,211,238,.55),
-0 0 80px rgba(34,211,238,.22);
+font-size:30px;
 }
 }
 </style>
@@ -264,7 +168,7 @@ box-shadow:
 </div>
 </div>
 
-<a href="index.html" class="btn">Voltar</a>
+<a href="index.html" class="btn">← Voltar</a>
 
 </header>
 
@@ -275,45 +179,43 @@ box-shadow:
 <div class="grid">
 
 <div class="card">
-<img src="img/formatacao.jpg" alt="Formatação de notebook">
+<img src="img/formatacao.jpg" alt="">
 <h3>Formatação Completa</h3>
-<p>Notebook otimizado com instalação limpa do Windows, drivers atualizados e programas essenciais.</p>
+<p>Notebook otimizado com instalação limpa do sistema, drivers atualizados e programas essenciais.</p>
 </div>
 
 <div class="card">
-<img src="img/manutencao.jpg" alt="Limpeza interna PC">
+<img src="img/manutencao.jpg" alt="">
 <h3>Limpeza Interna</h3>
 <p>Remoção de poeira, troca de pasta térmica e melhoria no resfriamento do equipamento.</p>
 </div>
 
 <div class="card">
-<img src="img/rede.jpg" alt="Upgrade SSD">
+<img src="img/rede.jpg" alt="">
 <h3>Upgrade para SSD</h3>
-<p>Substituição de HD antigo por SSD para aumentar drasticamente a velocidade do sistema.</p>
+<p>Substituição de HD antigo por SSD para aumentar drasticamente a velocidade.</p>
 </div>
 
 <div class="card">
 <video controls>
 <source src="videos/videoplayback.mp4" type="video/mp4">
-Seu navegador não suporta vídeo.
 </video>
-<h3>Montagem de PC Gamer</h3>
-<p>Montagem completa de computador gamer com organização de cabos e testes finais.</p>
+<h3>Montagem de PC</h3>
+<p>Montagem completa com organização de cabos e testes finais.</p>
 </div>
 
 <div class="card">
 <video controls>
 <source src="videos/videoplayback2.mp4" type="video/mp4">
-Seu navegador não suporta vídeo.
 </video>
 <h3>Reparo em Notebook</h3>
-<p>Troca de tela quebrada e revisão geral no equipamento.</p>
+<p>Troca de tela e revisão geral do equipamento.</p>
 </div>
 
 <div class="card">
-<img src="img/rede2.jpg" alt="Configuração Wi-Fi">
+<img src="img/rede2.jpg" alt="">
 <h3>Configuração de Rede</h3>
-<p>Instalação de roteador, melhoria de sinal Wi-Fi e segurança da rede doméstica.</p>
+<p>Instalação de roteador, melhoria de sinal Wi-Fi e segurança da rede.</p>
 </div>
 
 </div>
